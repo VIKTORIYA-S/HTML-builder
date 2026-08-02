@@ -11,4 +11,8 @@ const rl = readline.createInterface({
 
 console.log('Введите текст (для выхода наберите exit):');
 
-
+rl.on('line', (input) => {
+  if (input === 'exit') {
+    rl.close();
+  }
+});
