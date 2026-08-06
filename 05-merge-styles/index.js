@@ -7,7 +7,6 @@ const distDir = path.join(__dirname, 'project-dist');
 const bundlePath = path.join(distDir, 'bundle.css');
 
 fs.mkdir(distDir, { recursive: true }, (err) => {
-    console.log('готово');
     fs.rm(bundlePath, { force: true }, (err) => {
       const writeStream = fs.createWriteStream(bundlePath, { flag: 'a' });
       fs.readdir(stylesDir, (err, files) => {

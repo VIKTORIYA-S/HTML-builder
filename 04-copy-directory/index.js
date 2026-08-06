@@ -5,9 +5,7 @@ const files = path.join(__dirname, 'files');
 const filesCopy = path.join(__dirname, 'files-copy');
 
 fs.rm(filesCopy, { recursive: true, force: true }, (err) => {
-    console.log('удалено');
     fs.mkdir(filesCopy, (err) => {
-        console.log('папка создана');
         copyDir(files, filesCopy);
     });
 });
